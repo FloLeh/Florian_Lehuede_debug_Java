@@ -7,18 +7,11 @@ import java.util.Map;
 
 public class WriteSymptomDataToFile implements SymptomWriter {
 
-  private Map<String, Integer> symptoms;
-
-  /**
-   * 
-   * @param symptoms symptoms as keys and occurences as values
-   */
-  public WriteSymptomDataToFile(Map<String, Integer> symptoms) {
-    this.symptoms = symptoms;
+  public WriteSymptomDataToFile() {
   }
 
   @Override
-  public void writeSymptoms() {
+  public void writeSymptoms(Map<String, Integer> symptoms) {
     try {
       FileWriter fileWriter = new FileWriter("result.out");
       BufferedWriter writer = new BufferedWriter(fileWriter);
